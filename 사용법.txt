@@ -1,4 +1,4 @@
-﻿코리더 솔리드 일괄 추출 (CORSOLID)  v1.3
+﻿코리더 솔리드 일괄 추출 (CORSOLID)  v1.4
 ==========================================
 
 도면에 있는 여러 코리더의 솔리드를 한 번에 추출한다.
@@ -28,6 +28,7 @@ Civil 3D의 '코리더에서 솔리드 추출'을 코리더마다 반복하는 �
   CORSOLID   코리더 목록 창에서 골라서 추출 (기본 사용법)
   -CORSOLID  같은 기능을 명령행으로 (창 없이)
   CORLIST    도면의 코리더 목록과 최신 상태를 명령행에 보여 준다.
+  CORSOLIDUPDATE  새 버전이 있는지 지금 바로 확인한다. (6. 자동 업데이트)
 
 
 3. CORSOLID 창 사용법
@@ -100,6 +101,25 @@ Civil 3D의 '코리더에서 솔리드 추출'을 코리더마다 반복하는 �
 -------
   - 같은 코리더를 두 번 추출하면 솔리드가 두 벌 생긴다. 다시 추출할 때는 이전 솔리드를 지운다.
   - 코리더 도면이 크면 추출한 솔리드를 WBLOCK으로 따로 저장해 쓰는 것이 가볍다.
-  - 소스: src\ (CorridorSolids.cs, CorridorDialog.cs, CorridorForm.cs, Common.cs)
+  - 소스: src\ (CorridorSolids.cs, CorridorDialog.cs, CorridorForm.cs, Common.cs, UpdateCore.cs, UpdatePlugin.cs)
     빌드: dotnet build src\CorridorSolids.csproj -c Release
           → 나온 CorridorSolids.dll 을 CorridorSolids.bundle\Contents 에 복사
+
+
+6. 자동 업데이트 (v1.4부터)
+---------------------------
+  Civil 3D를 켜면 하루에 한 번 GitHub(https://github.com/ryunhyun/civil3d-corsolid)에서
+  새 버전이 있는지 확인한다. 확인은 뒤에서 하므로 Civil 3D가 켜지는 속도에는 영향이 없다.
+
+  새 버전이 있으면 '새 버전이 있습니다' 창이 뜬다.
+    [예]     새 버전을 받아 둔다. Civil 3D를 모두 끄면 자동으로 설치되고, 다음에 켤 때부터 적용된다.
+             (Civil 3D가 켜져 있는 동안에는 파일이 잠겨 있어서 바꿀 수 없기 때문)
+             다음에 켜면 명령행에 '○○(으)로 업데이트되었습니다'가 나온다.
+    [아니요] 지금은 받지 않는다. 내일 다시 알려 준다.
+
+  CORSOLIDUPDATE   하루 한 번을 기다리지 않고 지금 바로 확인한다.
+
+  - 인터넷이 안 되거나 GitHub에 접속할 수 없으면 아무것도 묻지 않고 넘어간다.
+    그럴 때는 https://github.com/ryunhyun/civil3d-corsolid/releases/latest 에서 zip을 받아 '설치.bat'을 실행한다.
+  - 기록: %LOCALAPPDATA%\CorridorSolids\update.log
+  - v1.3 이하에는 자동 업데이트가 없다. v1.4는 한 번 직접 설치해야 하고, 그다음부터 자동으로 된다.

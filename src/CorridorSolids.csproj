@@ -6,7 +6,7 @@
     <Nullable>disable</Nullable>
     <EnableDynamicLoading>true</EnableDynamicLoading>
     <AssemblyName>CorridorSolids</AssemblyName>
-    <Version>1.3.0</Version>
+    <Version>1.4.0</Version>
     <UseWindowsForms>true</UseWindowsForms>
     <AcadDir>C:\Program Files\Autodesk\AutoCAD 2026</AcadDir>
   </PropertyGroup>

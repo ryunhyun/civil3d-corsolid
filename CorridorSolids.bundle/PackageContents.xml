@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <ApplicationPackage SchemaVersion="1.0" AutodeskProduct="AutoCAD" ProductType="Application"
-    Name="CorridorSolids" AppVersion="1.3.0"
+    Name="CorridorSolids" AppVersion="1.4.0"
     Description="코리더 솔리드 일괄 추출 (CORSOLID, CORLIST)"
     ProductCode="{6C1E2B7A-4F0D-4E59-9C3B-2D7A51E0C8F1}"
     UpgradeCode="{0B9F3E64-8A21-4C77-B5D2-7E4A19C6F302}">
@@ -8,7 +8,7 @@
   <RuntimeRequirements OS="Win64" Platform="AutoCAD*" SeriesMin="R25.1" SeriesMax="R25.1" />
   <Components>
     <RuntimeRequirements OS="Win64" Platform="AutoCAD*" SeriesMin="R25.1" SeriesMax="R25.1" />
-    <ComponentEntry AppName="CorridorSolids" Version="1.3.0"
+    <ComponentEntry AppName="CorridorSolids" Version="1.4.0"
         ModuleName="./Contents/CorridorSolids.dll"
         AppDescription="코리더 솔리드 일괄 추출"
         LoadOnAutoCADStartup="True" />
