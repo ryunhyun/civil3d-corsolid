@@ -14,13 +14,15 @@ Civil 3D의 '코리더에서 솔리드 추출'을 코리더마다 반복하는 �
 1. 설치
 -------
   1) Civil 3D를 모두 끈다.
-  2) 압축을 푼 폴더에서 '설치.bat'을 더블클릭한다.
+  2) CorridorSolids_Setup_v○.○.exe 를 실행하고 [설치]를 누른다.
+     ('Windows의 PC 보호' 창이 뜨면 [추가 정보] → [실행]. 서명하지 않은 프로그램이라 처음에 나오는 경고다)
   3) Civil 3D를 켠다. 처음 켤 때 보안 경고(실행 파일 로드)가 나오면 [항상 로드]를 누른다.
-  4) 명령행에 CORLIST를 입력해서 코리더 목록이 나오면 설치된 것이다.
+  4) 명령행에 CORSOLID 를 입력해서 코리더 목록 창이 뜨면 설치된 것이다.
 
   설치 위치: %APPDATA%\Autodesk\ApplicationPlugins\CorridorSolids.bundle
-  제거: '제거.bat' 더블클릭 (Civil 3D를 끈 상태에서)
-  새 버전으로 바꿀 때: Civil 3D를 끄고 새 '설치.bat'을 다시 실행하면 덮어쓴다.
+  제거: 같은 Setup.exe를 실행해서 [제거] (Civil 3D를 끈 상태에서)
+  exe를 실행할 수 없는 PC: zip을 받아 압축을 풀고 '설치.bat' / '제거.bat'을 쓴다(같은 결과).
+  새 버전: v1.4부터는 자동으로 알려 준다(6. 자동 업데이트). 직접 바꿀 때는 새 Setup.exe를 실행한다.
 
 
 2. 명령
@@ -104,6 +106,9 @@ Civil 3D의 '코리더에서 솔리드 추출'을 코리더마다 반복하는 �
   - 소스: src\ (CorridorSolids.cs, CorridorDialog.cs, CorridorForm.cs, Common.cs, UpdateCore.cs, UpdatePlugin.cs)
     빌드: dotnet build src\CorridorSolids.csproj -c Release
           → 나온 CorridorSolids.dll 을 CorridorSolids.bundle\Contents 에 복사
+    설치 프로그램: dotnet publish setup\CorridorSolidsSetup.csproj -c Release -o <출력폴더>
+          → CorridorSolids_Setup.exe (번들이 exe 안에 들어감. 위에서 dll을 먼저 복사한 뒤 만든다)
+          아이콘: setup\corsolid.ico (setup\make_icon.ps1로 다시 그릴 수 있음)
 
 
 6. 자동 업데이트 (v1.4부터)
