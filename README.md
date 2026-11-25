@@ -14,7 +14,7 @@ Civil 3D의 '코리더에서 솔리드 추출'을 코리더마다 반복한 것�
 
 ## 설치
 
-1. 오른쪽 **Releases**에서 최신 `CorridorSolids_Setup_vX.X.exe`를 받습니다.
+1. **[CorridorSolids.exe 받기](https://github.com/ryunhyun/civil3d-corsolid/releases/latest/download/CorridorSolids.exe)** (항상 최신 버전)
 2. Civil 3D를 모두 끄고, 받은 exe를 실행해서 **[설치]**를 누릅니다.
    'Windows의 PC 보호' 창이 뜨면 **[추가 정보] → [실행]**을 누릅니다(서명하지 않은 프로그램이라 나오는 경고).
 3. Civil 3D를 켭니다. 보안 경고가 나오면 **[항상 로드]**를 누릅니다.
@@ -40,7 +40,7 @@ Civil 3D를 켜면 하루 한 번 이 저장소의 최신 Release를 확인합�
 v1.3 이하를 쓰고 있다면 v1.4를 한 번 직접 설치해야 합니다.
 
 **새 버전을 낼 때(관리자):** Release 태그는 `v1.5`처럼, 첨부 파일은 `.zip` 하나(안에 `CorridorSolids.bundle` 포함, 자동 업데이트가 이것을 받음)와
-`CorridorSolids_Setup_v1.5.exe`(처음 설치용). zip 안 dll 버전이 태그와 같아야 합니다. Release 설명란 내용이 업데이트 알림 창에 표시됩니다.
+`CorridorSolids.exe`(처음 설치용, 이름 고정 — 위 받기 링크가 항상 최신을 가리킴). zip 안 dll 버전이 태그와 같아야 합니다. Release 설명란 내용이 업데이트 알림 창에 표시됩니다.
 
 ## 빌드
 
@@ -59,7 +59,7 @@ AutoCAD 설치 경로가 다르면 `src\CorridorSolids.csproj`의 `AcadDir`을 �
 
 ## 변경 내역
 
-- **v1.4** 자동 업데이트 (GitHub Release 확인, Civil 3D를 끄면 설치), `CORSOLIDUPDATE`, 아이콘 있는 설치 프로그램(Setup.exe)
+- **v1.4** 자동 업데이트 (GitHub Release 확인, Civil 3D를 끄면 설치), `CORSOLIDUPDATE`, 아이콘 있는 설치 프로그램(CorridorSolids.exe)
 - **v1.3** 추출 전 모든 영역 시작 +x / 끝 −x m 측점 조정 옵션
 - **v1.2** 출력 객체 유형, 출력 대상(현재/기존/새 도면) 선택
 - **v1.1** CORSOLID 코리더 목록 창, 이름 일부 검색
